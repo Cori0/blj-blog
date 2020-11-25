@@ -6,15 +6,12 @@
     <title>Document</title>
 </head>
 <body>
+        <?php
+            include 'nav.php' 
+        ?>
 
-    <?php
-        include 'nav.php' 
-    ?>
-    <h1>
-        Home
-    </h1>   
-
-
+        <?php
+            include 'footer.php' 
+        ?>
 </body>
 </html>
-

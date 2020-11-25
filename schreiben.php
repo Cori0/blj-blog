@@ -1,11 +1,12 @@
 
 <?php 
-    include 'nav.php';
+    include 'nav.php';    
+    include 'blog.php';
     if($_SERVER['REQUEST_METHOD'] === 'POST') {
 
-        $created_by  = $_POST['created_by']    ?? '';
-        $post_title  = $_POST['post_title']   ?? '';
-        $post_text   = $_POST['post_text']   ?? '';
+        $created_by  = trim($_POST['created_by'])    ?? '';
+        $post_title  = trim($_POST['post_title'])  ?? '';
+        $post_text   = trim($_POST['post_text'])   ?? '';
 
         $statement = $dbConnection->prepare("INSERT INTO `blog_db` (created_at, created_by, post_title, post_text) VALUES(now(), :created_by, :Post_title, :post_text)");
         $statement->execute([':created_by' => $created_by, ':post_title' => $post_title, ':post_text' => $post_text]);
@@ -22,10 +23,6 @@
 </head>
 <body>
 <a href="#add-new-post-form" >Neuen Beitrag hinzufügen</a>
-
-    <?php
-    include 'blog.php';
-    ?>
 
     <?php
 

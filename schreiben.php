@@ -1,7 +1,7 @@
 
 <?php 
     include 'nav.php';    
-    include 'blog.php';
+
     if($_SERVER['REQUEST_METHOD'] === 'POST') {
 
         $created_by  = trim($_POST['created_by'])    ?? '';
@@ -23,19 +23,9 @@
 </head>
 <body>
 <a href="#add-new-post-form" >Neuen Beitrag hinzufügen</a>
-
-    <?php
-
-    // if($_SERVER['REQUEST_METHOD'] === 'GET') {
-        $statement = $dbConnection->query('SELECT * FROM `blog_db` order by created_at desc');
-        foreach($statement->fetchAll() as $blog_db) { ?>
-            <div class="created-by"><?php echo '<p>' . $blog_db["created_by"]. '</p>';?></div> 
-            <div class="created_at"><?php echo '<p>' . $blog_db["created_at"]. '</p>';?></div>
-            <div class="post_title"><?php echo '<p>' . $blog_db["post_title"]. '</p>';?></div>
-            <div class="post_text"><?php echo '<p>' . $blog_db["post_text"]. '</p>';?></div><br>
-            <?php
-        } 
-        ?>
+<?php
+include 'blog.php';
+?>
 
     <form action="blog.php" method="post" id="add-new-post-form">
         <div class="created_by"><br>

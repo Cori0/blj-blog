@@ -26,27 +26,33 @@ li {
     font-size: 30px;
 }
 
-#home :hover{
-    background: rgb(255, 0, 0);
-    color: rgb(255, 0, 0);
+l :hover{
+    background: rgb(0, 0, 0);
+    color: rgb(0, 0, 0);
 }
 
-#post :hover{
-    background: rgb(255, 136, 0);
-    color: rgb(255, 136, 0);
-}
-
-#blog :hover{
-    background: yellow;
-    color: yellow;
-}
-
-#others :hover{
-    background: rgb(150, 0, 255);
-    color:  rgb(150, 0, 255);
-}
 
 body {
     font-size: large;
 }
 
+form {
+    text-align: center;
+}
+
+
+#time {
+    font-size: small;
+    color: rgb(162, 158, 199);
+}
+
+#title {
+    font-size: 20px;
+    font-weight: bold;
+}
+
+#newpost {
+    font-size: medium;
+    color: black;
+    font-weight: bold;
+}

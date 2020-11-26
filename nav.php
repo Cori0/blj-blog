@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -8,9 +9,9 @@
 </head>
 <body>
 <ul class="ul">
-<li id="home"><a href="projekt.php">home</a></li>
-<li id="post"><a href="schreiben.php">post</a></li>
-<li id="others"><a href="others.php">others</a></li>
+<li class="navigation" id="home"><a href="projekt.php">Home</a></li>
+<li class="navigation" id="post"><a href="schreiben.php">Post</a></li>
+<li class="navigation" id="others"><a href="others.php">Others</a></li>
 </ul>
 </body>
 </html>

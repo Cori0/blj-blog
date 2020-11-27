@@ -1,8 +1,8 @@
 <?php
-$user = 'root';
-$password = '';
+$user = 'd041e_coreichmuth';
+$password = '12345_Db!!!';
 
-$dbConnection = new PDO('mysql:host=localhost;dbname=blogdb', $user, $password, [
+$dbConnection = new PDO('mysql:host=mysql2.webland.ch;dbname=d041e_coreichmuth', $user, $password, [
     PDO::ATTR_ERRMODE            => PDO::ERRMODE_EXCEPTION,
     PDO::MYSQL_ATTR_INIT_COMMAND => 'SET NAMES utf8',
 ]);

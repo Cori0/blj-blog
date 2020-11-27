@@ -1,8 +1,8 @@
 
 <?php 
-    include 'nav.php';    
-    include 'blog.php';
-    include 'moving.php';
+    include 'views/nav.php';    
+    include 'views/blog.php';
+    include 'views/moving.php';
     if($_SERVER['REQUEST_METHOD'] === 'POST') {
 
         $created_by  = trim($_POST['created_by'])    ?? '';
@@ -53,17 +53,17 @@
                 <legend class="form-legend">Blog</legend>   
                 <div class="created_by"><br>
                     <label for="created_by">Name:</label><br>
-                    <input type="text" id="created_by" name="created_by" value="<?= $created_by ?? '' ?>"><br>
+                    <input type="text" id="created_by" name="created_by" value="<?=htmlspecialchars( $created_by ?? '' )?>"><br>
                 </div><br>
 
                 <div class="post_title"><br>
                     <label for="post_title">Titel:</label><br>
-                    <input type="text" id="post_title" name="post_title" value="<?= $post_title ?? '' ?>"><br>
+                    <input type="text" id="post_title" name="post_title" value="<?=htmlspecialchars($post_title ?? '' )?>"><br>
                 </div><br>
                 
                 <div class="post_text">
                     <label for="post_text">Beitrag:</label><br>
-                    <textarea name="post_text" rows="15" cols="60" value="<?= $post_text ?? '' ?>"></textarea>
+                    <textarea name="post_text" rows="15" cols="60" value="<?=htmlspecialchars($post_text ?? '' )?>"></textarea>
                 </div><br>
                 <div class="bild">
                     <label class="form-label" for="link" name="link">Link vom Bild:</label><br>

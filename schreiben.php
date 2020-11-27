@@ -43,24 +43,25 @@
     ?>
 
         <form action="schreiben.php" method="post" id="add-new-post-form">
-            <div class="created_by"><br>
-                <label for="created_by">Name:</label><br>
-                <input type="text" id="created_by" name="created_by" value="<?= $created_by ?? '' ?>"><br>
-            </div><br>
+                <legend class="form-legend">Blog</legend>   
+                <div class="created_by"><br>
+                    <label for="created_by">Name:</label><br>
+                    <input type="text" id="created_by" name="created_by" value="<?= $created_by ?? '' ?>"><br>
+                </div><br>
 
-            <div class="post_title"><br>
-                <label for="post_title">Titel:</label><br>
-                <input type="text" id="post_title" name="post_title" value="<?= $post_title ?? '' ?>"><br>
-            </div><br>
-            
-            <div class="post_text">
-                <label for="post_text">Beitrag:</label><br>
-                <textarea name="post_text" rows="15" cols="60" value="<?= $post_text ?? '' ?>"></textarea> 
-            </div>
+                <div class="post_title"><br>
+                    <label for="post_title">Titel:</label><br>
+                    <input type="text" id="post_title" name="post_title" value="<?= $post_title ?? '' ?>"><br>
+                </div><br>
+                
+                <div class="post_text">
+                    <label for="post_text">Beitrag:</label><br>
+                    <textarea name="post_text" rows="15" cols="60" value="<?= $post_text ?? '' ?>"></textarea> 
+                </div>
 
-            <form method="post">
-                <input class="submit" type="submit" value="Absenden"/>
-                </form>      
+                <form method="post">
+                    <input class="submit" type="submit" value="Absenden"/>
+                    </form>       
         </form>
 </body>
 </html>

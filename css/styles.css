@@ -1,33 +1,9 @@
 
-.wrapper {
-    margin-top: 2em;
-    width: 80%;
-    max-width: 550px;
-    margin: 2em auto 0;
-}
-
-.form-label {
-    margin-top: .7em;
-    margin-bottom: .3em;
-}
-
-fieldset {
-    margin-top: 2em;
-}
-
-.form-legend + .form-group > .form-label:first-child {
-    margin-top: 0;
-}
-
-li :hover{
-    background: rgb(0, 0, 0);
-    color: rgb(255, 225, 0);
-}
-
 li {
     display: inline;
-    padding-right: 4%;
-    font-size: 30px;
+    margin-left: 50px;
+    margin-right: 50px;
+    font-size: 35px;
 }
 
 
@@ -37,12 +13,43 @@ body {
 
 form {
     text-align: center;
+    font-size: 20px;
 }
 
+#newpost {
+    font-size: 25px;
+    font-weight: bold;
+}
+
+#newpost :hover{
+    background: black;
+    color: orange;
+}
+
+#blogpost {
+    border: 1px solid black;
+    width: 550px;
+    text-align: left;
+    padding-right: 10px;
+    padding-left: 10px;
+    margin: auto;
+    background-color: rgb(245, 243, 243);
+    border-radius: 20px;
+    margin-top: 30px;
+    line-height: 10px;
+}
 
 #time {
-    font-size: small;
+    text-align: end;
     color: rgb(162, 158, 199);
+}
+
+form {
+    margin-top: 40px;
+}
+
+#name, #time{
+    font-size: 15px;
 }
 
 #title {
@@ -50,17 +57,45 @@ form {
     font-weight: bold;
 }
 
-#newpost {
-    font-size: medium;
-    color: black;
-    font-weight: bold;
+#text {
+    font-size: 20px;
 }
 
-.ul {
-    width: auto;
+.otherurls :hover{
+     background: black;
+     color: rgb(255, 0, 170);
+ }
+
+.otherurls :active{
+    color: black;
+}
+
+ .otherurls :visited{
+     background: black;
+     color: rgb(0, 171, 250);
+ }
+
+.otherurls {
+    text-align: center;
+    line-height: 30px;
+}
+
+#ul :visited{
+    color: black;
+}
+
+#ul {
     border: 1px solid black;
     height: auto;
     text-align: center;
     border-radius: 10px;
     background-color: rgb(170, 170, 170);
+    padding-top: 10px;
+    padding-bottom: 10px;
 }
+
+#ul :hover{
+    background: rgb(0, 0, 0);
+    color:yellow;
+}
+

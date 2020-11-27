@@ -7,7 +7,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="../css/styles.css"></link>
+    <link rel="stylesheet" href="css/styles.css"></link>
     <title>Document</title>
 </head>
 <body>
@@ -31,7 +31,7 @@
 
 
             foreach($urls as $url) {
-                $link = '<a href="' . $url["blogUrl"] . '" target="_blank">' . $url["blogAuthor"] . '\'s Blog' . '</a>' . '<br>';
+                htmlspecialchars($link = '<a href="' . $url["blogUrl"] . '" target="_blank">' . $url["blogAuthor"] . '\'s Blog' . '</a>' . '<br>');
                 echo $link;
             }
         ?>

@@ -1,8 +1,8 @@
 
 <?php 
-    include 'views/nav.php';    
-    include 'views/blog.php';
-    include 'views/moving.php';
+    include 'nav.php';    
+    include 'blog.php';
+    include 'moving.php';
     if($_SERVER['REQUEST_METHOD'] === 'POST') {
 
         $created_by  = trim($_POST['created_by'])    ?? '';
@@ -12,7 +12,9 @@
 
         $statement = $dbConnection->prepare("INSERT INTO `posts` (created_at, created_by, post_title, post_text, link) VALUES(now(), :created_by, :post_title, :post_text, :link)");
         $statement->execute([':created_by' => $created_by, ':post_title' => $post_title, ':post_text' => $post_text, ':link' => $link]);
-}
+
+        $created_by = $post_title = $post_text = $link = '';
+        }
 ?>
 
 <!DOCTYPE html>
@@ -39,17 +41,17 @@
             $statement = $dbConnection->query('SELECT * FROM posts order by created_at desc');
             foreach($statement->fetchAll() as $posts) {
         ?><div id="blogpost"><?php
-                echo '<p id="name" class="blog">'. $posts["created_by"]. '</p>';   
-                echo '<p id="title" class="blog">'. $posts["post_title"]. '</p>';  
-                echo '<p id="text" class="blog">'. $posts["post_text"]. '</p>';
-                echo '<p id="time" class="blog">'. $posts["created_at"]. '</p>';
+                echo '<p id="name" class="blog">'. htmlspecialchars($posts["created_by"]). '</p>';   
+                echo '<p id="title" class="blog">'.htmlspecialchars($posts["post_title"]). '</p>';  
+                echo '<p id="text" class="blog">'. htmlspecialchars($posts["post_text"]). '</p>';
+                echo '<p id="time" class="blog">'. htmlspecialchars($posts["created_at"]). '</p>';
                 echo "<br><img src>".'<br>';
         ?></div><?php
             }
         ?>
 
 
-        <form action="schreiben.php" method="post" id="add-new-post-form">
+        <form action="index.php" method="post" id="add-new-post-form">
                 <legend class="form-legend">Blog</legend>   
                 <div class="created_by"><br>
                     <label for="created_by">Name:</label><br>

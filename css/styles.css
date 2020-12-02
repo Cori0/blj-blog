@@ -9,6 +9,10 @@ li {
 
 body {
     font-size: large;
+    background-image:url('../sonnenuntergang.jpg');
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
 }
 
 form {
@@ -19,6 +23,17 @@ form {
 #newpost {
     font-size: 25px;
     font-weight: bold;
+    border: 1px rgb(64, 54, 206) solid;
+    background: rgb(230, 245, 255);
+    border-radius: 10px;
+    padding-left: 20px;
+    padding-right: 20px;
+    padding-top: 5px;
+    padding-bottom: 5px;
+}
+
+.newpost :link{
+    color: black;
 }
 
 #newpost :hover{
@@ -33,7 +48,7 @@ form {
     padding-right: 40px;
     padding-left: 20px;
     margin: auto;
-    background-color: rgb(245, 243, 243);
+    background-color: rgb(230, 245, 255);
     border-radius: 20px;
     margin-top: 30px;
     line-height: 25px;
@@ -99,13 +114,14 @@ form {
 }
 
 #ul {
-    border: 1px solid rgb(167, 167, 167);
+    border: 1px solid rgb(90, 109, 255);
     height: auto;
     text-align: center;
     border-radius: 10px;
-    background-color: rgb(230, 230, 230);
+    background-color: rgb(189, 202, 255);
     padding-top: 10px;
     padding-bottom: 10px;
+    margin-bottom: 40px;
 }
 
 #ul :hover{
@@ -117,7 +133,7 @@ form {
     border: 1px solid rgb(218, 218, 218);
     width: 450px;
     text-align: center;
-    background-color: rgb(245, 245, 245);
+    background-color: rgb(238, 250, 255);
     border-radius: 10px;
     margin: auto;
     margin-bottom: 40px;
@@ -125,3 +141,4 @@ form {
     padding-top: 5px;
     padding-bottom: 5px;
 }
+

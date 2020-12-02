@@ -32,7 +32,7 @@
 
             foreach($urls as $url) {
         ?><div id="urls"><?php
-                htmlspecialchars($link = '<a href="' . $url["blogUrl"] . '" target="_blank">' . $url["blogAuthor"] . '\'s Blog' . '</a>' . '<br>');
+                htmlspecialchars($link = '<a href="' . htmlspecialchars($url["blogUrl"]) . '" target="_blank">' . htmlspecialchars($url["blogAuthor"]) . '\'s Blog' . '</a>' . '<br>');
                 echo $link;
         ?></div><?php
             }

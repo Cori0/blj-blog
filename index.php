@@ -17,7 +17,6 @@
         }
 ?>
 
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -31,13 +30,13 @@
 </head>
 <body>
 
-<div id="trigger">
+<div>
 
-    <li id="newpost"><a href="#add-new-post-form">Neuen Beitrag hinzufügen</a></li><br>
+    <li id="newpost" class="newpost"><a href="#add-new-post-form">Neuen Beitrag hinzufügen</a></li><br>
 
 
 
-    </div>
+</div>
         <?php
             $statement = $dbConnection->query('SELECT * FROM posts order by created_at desc');
             foreach($statement->fetchAll() as $posts) {

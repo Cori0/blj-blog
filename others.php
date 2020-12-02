@@ -10,7 +10,7 @@
     <link rel="stylesheet" href="css/styles.css"></link>
     <title>Document</title>
 </head>
-<body>
+<body id="bodyothers">
     
     <h2 class="linktext">
         Hier geht es zu den anderen Links:

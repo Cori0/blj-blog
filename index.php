@@ -28,7 +28,7 @@
     <title>Document</title>
     <link rel="stylesheet" href="css/styles.css"></link>
 </head>
-<body>
+<body id="body">
 
 <div>
 
@@ -44,8 +44,8 @@
                 echo '<p id="name" class="blog">'. htmlspecialchars($posts["created_by"]). '</p>';   
                 echo '<p id="title" class="blog">'.htmlspecialchars($posts["post_title"]). '</p>';  
                 echo '<p id="text" class="blog">'. htmlspecialchars($posts["post_text"]). '</p>';
-                echo '<p id="time" class="blog">'. htmlspecialchars($posts["created_at"]). '</p>';
-                echo "<br><img src>".'<br>';
+                echo '<img class="image-url" src='. htmlspecialchars($posts["link"]). '>';
+                echo '<p id="time" class="blog">'. htmlspecialchars($posts["created_at"]). '</p>'
         ?></div><?php
             }
             if(HasEmptySpaces === false > 60){

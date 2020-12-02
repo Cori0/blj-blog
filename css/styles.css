@@ -9,7 +9,17 @@ li {
 
 body {
     font-size: large;
+}
+
+#body {
     background-image:url('../sonnenuntergang.jpg');
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
+}
+
+#bodyothers {
+    background-image:url('../nightsky.jpg');
     background-repeat: no-repeat;
     background-attachment: fixed;
     background-size: cover;
@@ -43,14 +53,14 @@ form {
 
 #blogpost {
     border: 1px solid black;
-    width: 550px;
+    width: 1000px;
     text-align: left;
     padding-right: 40px;
     padding-left: 20px;
     margin: auto;
     background-color: rgb(230, 245, 255);
     border-radius: 20px;
-    margin-top: 30px;
+    margin-top: 40px;
     line-height: 25px;
     height: auto;
 }

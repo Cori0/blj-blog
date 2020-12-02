@@ -38,9 +38,7 @@
 
 
     </div>
-        <?php if(text > 60){
-            
-        }
+        <?php
             $statement = $dbConnection->query('SELECT * FROM posts order by created_at desc');
             foreach($statement->fetchAll() as $posts) {
         ?><div id="blogpost"><?php

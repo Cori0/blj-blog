@@ -12,7 +12,7 @@
 </head>
 <body>
     
-    <h2>
+    <h2 class="linktext">
         Hier geht es zu den anderen Links:
     </h2>
 
@@ -31,8 +31,10 @@
 
 
             foreach($urls as $url) {
+        ?><div id="urls"><?php
                 htmlspecialchars($link = '<a href="' . $url["blogUrl"] . '" target="_blank">' . $url["blogAuthor"] . '\'s Blog' . '</a>' . '<br>');
                 echo $link;
+        ?></div><?php
             }
         ?>
     </div>

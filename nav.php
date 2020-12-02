@@ -9,9 +9,9 @@
 </head>
 <body>
 <ul id="ul" class="ul">
-<li class="navigation" id="home"><a href="views/projekt.php">Home</a></li>
+<li class="navigation" id="home"><a href="projekt.php">Home</a></li>
 <li class="navigation" id="post"><a href="index.php">Post</a></li>
-<li class="navigation" id="others"><a href="views/others.php">Others</a></li>
+<li class="navigation" id="others"><a href="others.php">Others</a></li>
 </ul>
 </body>
 </html>

@@ -17,6 +17,7 @@
         }
 ?>
 
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -37,7 +38,9 @@
 
 
     </div>
-        <?php
+        <?php if(text > 60){
+            
+        }
             $statement = $dbConnection->query('SELECT * FROM posts order by created_at desc');
             foreach($statement->fetchAll() as $posts) {
         ?><div id="blogpost"><?php
@@ -47,6 +50,9 @@
                 echo '<p id="time" class="blog">'. htmlspecialchars($posts["created_at"]). '</p>';
                 echo "<br><img src>".'<br>';
         ?></div><?php
+            }
+            if(HasEmptySpaces === false > 60){
+                echo"<br>";
             }
         ?>
 
